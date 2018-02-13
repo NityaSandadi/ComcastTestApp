@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,7 +50,7 @@ public class UserController {
 		}
 		return user;
 	}
-	
+
 	// Get service to queries user from the User table by userName.
 	@GetMapping(value = "/user_name/{userName}")
 	public User getUserByUserName(@PathVariable("userName") String userName) throws UserNotFoundException {
@@ -63,7 +62,7 @@ public class UserController {
 
 		return userRepository.findByUserName(userName);
 	}
-	
+
 	// Get service to add user to the User table.
 	@PostMapping(value = "/add_row")
 	public ResponseEntity<?> add(@RequestBody final User user) throws UserNotFoundException, URISyntaxException {
@@ -71,7 +70,7 @@ public class UserController {
 		// checks if user with the userName already exists.
 		boolean userExistsByUserName = this.validateUser.isUserExistsByUserName(user.getUserName());
 		boolean userExistsById = false;
-		
+
 		Integer resultId = null;
 		// checks if the user with userId already exists.
 		if (user.getId() != null) {
@@ -84,12 +83,10 @@ public class UserController {
 			resultId = result.getId();
 		}
 
-		URI firstURI = new URI(
-			      "http://localhost:8080"
-			      + "/user/" +resultId);
+		URI firstURI = new URI("http://localhost:8080" + "/user/" + resultId);
 		return ResponseEntity.created(firstURI).build();
 	}
-	
+
 	// Delete service to delete user from the User table.
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<?> delete(@PathVariable("id") final Integer id) throws UserNotFoundException {

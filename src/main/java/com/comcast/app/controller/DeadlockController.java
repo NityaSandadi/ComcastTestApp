@@ -3,14 +3,15 @@ package com.comcast.app.controller;
 import java.util.Iterator;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/*
+ * Rest controller that creates deadlock and checks the status of the threads.
+ */
 @RestController
 @RequestMapping(value = "/deadlock")
 public class DeadlockController {

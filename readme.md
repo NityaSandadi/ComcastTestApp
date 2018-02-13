@@ -7,8 +7,8 @@ This is a Maven application. To build and run the application on the command lin
 
 Steps to build and run the application on the command line:
 
-	•$mvn compile
-	•$mvn spring-boot:run
+	•mvn compile
+	•mvn spring-boot:run
 
 #Curl Commands to call the rest endpoints:
 
@@ -28,10 +28,10 @@ This is a Rest endpoint that accepts N as a request variable and returns a JSON 
 
 3) Deadlock Scenario:
 
+This endpoint creates two threads that will become deadlock with each other. To create a deadlock and to check the status of the threads, please use the below curl commands.
 
-
-
-
+	• To create a deadlock use curl command: curl -X POST http://localhost:8080/deadlock/
+	• To check the status use thr curl command: curl http://localhost:8080/deadlock/status
 
 4) Endpoints to add, query and delete rows in a database:
 
@@ -50,6 +50,7 @@ Query Endpoints:
 Add Endpoints:
 
 To add a user to the database, please create a json file( example: data.json) with the data in the format given below. 
+ 
  {
         "userName": "user-5",
         "firstName": "firstName1",

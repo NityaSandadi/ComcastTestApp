@@ -13,11 +13,11 @@ public class FibonacciNumbersController {
 
 	@RequestMapping(value = "/fibonacciNumbers", produces = { "application/json" }, method = RequestMethod.GET)
 	public int[] getFibonacciNumbers(@RequestParam(value = "N", required = true) Integer N) {
-		if( N == null ) {
+		if (N == null) {
 			return null;
 		}
 		int[] result = new int[N + 1];
-		
+
 		result[0] = 0;
 		if (N == 0) {
 			return result;

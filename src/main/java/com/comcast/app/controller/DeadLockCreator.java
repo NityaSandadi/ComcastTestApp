@@ -1,6 +1,8 @@
 package com.comcast.app.controller;
 
-
+/*
+ * Class for creation of deadlock.
+ */
 public class DeadLockCreator {
 
 	String s = "ABC";
@@ -11,18 +13,13 @@ public class DeadLockCreator {
 		Thread thread1 = new Thread("Thread-1") {
 
 			public void run() {
-
 				synchronized (s) {
-
 					try {
 						Thread.sleep(5000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-
-
 					synchronized (t) {
-
 					}
 				}
 			}
@@ -37,7 +34,6 @@ public class DeadLockCreator {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-
 					synchronized (s) {
 
 					}
@@ -46,7 +42,6 @@ public class DeadLockCreator {
 		};
 
 		thread1.start();
-
 		thread2.start();
 
 	}

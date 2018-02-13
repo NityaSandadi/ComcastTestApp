@@ -83,13 +83,13 @@ public class User {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	
+
 	public User(final Integer userId, final String userName, final String firstName, final String lastName) {
 		this.userId = userId;
 		this.userName = userName;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		
+
 	}
 
 }
