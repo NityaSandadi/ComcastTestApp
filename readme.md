@@ -10,7 +10,7 @@ Steps to build and run the application on the command line:
 	•mvn compile
 	•mvn spring-boot:run
 
-#Curl Commands to call the rest endpoints:
+##Curl Commands to call the rest endpoints:
 
 1) Hello world rest endpoint:
 
