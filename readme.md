@@ -30,6 +30,9 @@ This is a Rest endpoint that accepts N as a request variable and returns a JSON 
 
 
 
+
+
+
 4) Endpoints to add, query and delete rows in a database:
 
 Here are the rest endpoints to add, query and delete rows in a database. Database has a User table with columns (userId, userName, firstName and lastName). The table has been initialized with 2 rows when you start the application.
