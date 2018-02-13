@@ -1,4 +1,4 @@
-package com.comcast.controller.app.repository;
+package com.comcast.app.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;

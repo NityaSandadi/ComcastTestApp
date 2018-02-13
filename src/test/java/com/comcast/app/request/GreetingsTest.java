@@ -1,4 +1,4 @@
-package com.comcast.controller.app.request;
+package com.comcast.app.request;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
